@@ -10,7 +10,6 @@ export default function Authentication() {
   
   const [active, setActive] = useState('signup')
   const [error, setError] = useState<string | null>(null)
-  const [user, setUser] = useState('')
 
   useEffect(() => {
     setError(null)

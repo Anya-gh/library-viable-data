@@ -128,4 +128,5 @@ dist
 
 # backend
 backend/env/
+.pytest_cache
 
