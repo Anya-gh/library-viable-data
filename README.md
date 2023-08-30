@@ -8,6 +8,8 @@ To run, use the shell script run.sh. Since this is a shell script, you will like
 `npm --prefix ./frontend install`
 `npm --prefix ./frontend run dev & python backend/src/api.py`
 
+The application will start on port 5173 (enter localhost:5173 into your browser) unless this is taken. The API will start on port 105. Please make sure nothing is running on either of these ports, but especially not on 105, as that value is hardcoded into the frontend's API calls.
+
 If this does not work for whatever reason, please install the packages manually. You can see which packages need to be installed by inspecting the files, but I have listed them here nonetheless:
 
 ### Backend
