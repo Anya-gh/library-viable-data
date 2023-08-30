@@ -21,8 +21,24 @@ If this does not work for whatever reason, please install the packages manually.
 - Tailwind
 - Framer motion
 
+### Browser
+
+Firefox has certain issues with accessing resources locally, due to a CORS setting. It seems like this can happen for a number of reasons; if it does, please try another browser. 
+
+This app has responsive design, so feel free to resize the browser window as you wish! Most browers have a responsive design view tool as well, which is best suited to see this.
+
 ## Notes
 The application includes a complete UI with a home and library page, built with React. It uses a Python API with flask and sqlite for the database to manage the library data.
+
+For basic testing purposes, there is one user:
+Anya Singh, email: anya@mail.com, password: password123
+
+There are two books:
+Book of cool
+Guide of guides
+
+The one user owns the first book.
+You can create additional users through the UI. If you'd like to, you can manually add books to the database. There's a `createdata.py` Python script that should give you a good idea of how that's done.
 
 I have included an example of a unit test, but I have not been able to unit test thoroughly. For me, the given time was not enough to comprehensively test using unit tests, so I apologise about that. I wanted to focus more on the frontend and backend.
 

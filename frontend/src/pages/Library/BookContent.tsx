@@ -1,5 +1,6 @@
 import { booksResponse } from "./Library"
 import bookicon from '../../assets/icons8-book-50.png'
+import { useState } from "react"
 
 type BookContentProps = {
   book: booksResponse,
@@ -7,12 +8,14 @@ type BookContentProps = {
   bid: number
 }
 
-
-const onClickHandler = async (uid: number, bid: number) => {
-  fetch("http://localhost:105/loan", {method: "POST", body: JSON.stringify({"uid": uid, "bid": bid})})  
-}
-
 export default function BookContent ( {book, uid, bid}: BookContentProps) {
+
+  const [loaned, setLoaned] = useState(false)
+
+  const onClickHandler = async (uid: number, bid: number) => {
+    fetch("http://localhost:105/loan", {method: "POST", body: JSON.stringify({"uid": uid, "bid": bid})}) 
+    setLoaned(true)
+  }
 
   return (
     <>
@@ -27,7 +30,8 @@ export default function BookContent ( {book, uid, bid}: BookContentProps) {
         <p className='text-gray-400'>until: {book.returndate}</p>
       </div> 
       : 
-      <button className='p-1 w-20 rounded-xl bg-sky-500 mb-10 lg:hover:cursor-pointer lg:hover:bg-sky-400 transition duration-200' onClick={() => {onClickHandler(uid, bid)}}>Loan</button>}
+      <button className='p-1 w-20 my-2 rounded-xl bg-sky-500 mb-10 lg:hover:cursor-pointer lg:hover:bg-sky-400 transition duration-200' onClick={() => {onClickHandler(uid, bid)}}>Loan</button>}
+      {loaned && <p>Thank you for using our service! Reload the page to see your new books.</p>}
     </li>
     </>
   )
