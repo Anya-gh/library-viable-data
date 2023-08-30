@@ -16,7 +16,7 @@ books_data = [
 ]
 
 loan_data =[
-    (1, 1, "2023-08-31")
+    (1, 1, "2023-08-30")
 ]
 
 cur.executemany("INSERT INTO Users(First_name, Last_name, Email, Password) VALUES(?, ?, ?, ?)", users_data)

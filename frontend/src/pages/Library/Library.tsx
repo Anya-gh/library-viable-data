@@ -109,7 +109,7 @@ export default function Library() {
               if (activeSort === 'all') { return book }
               else if (activeSort === 'available' ) { if (book.uid === null) { return book }}
               else if (activeSort === 'borrowed' ) { if (book.uid !== null) { return book }}
-              else if (activeSort === 'duetoday' ) { if (book.returndate !== null && book.returndate === new Date().toJSON().slice(0,10)) { return book }}
+              else if (activeSort === 'duetoday' ) { const date = new Date().toJSON().slice(0,10); if (book.returndate !== null && book.returndate === date) { return book }}
             })
             if (filteredBooks.length > 0) {
               return (
