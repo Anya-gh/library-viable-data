@@ -21,7 +21,7 @@ If this does not work for whatever reason, please install the packages manually.
 - Tailwind
 - Framer motion
 
-### Browser
+### Browser
 
 Firefox has certain issues with accessing resources locally, due to a CORS setting. It seems like this can happen for a number of reasons; if it does, please try another browser. 
 
