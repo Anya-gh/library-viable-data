@@ -3,7 +3,7 @@
 ## Start guide
 A library management system as part of an interview for Viable Data.
 
-To run, use the shell script run.sh. If you don't want to do this, you can run the commands manually. The contents of the file are:
+To run, use the shell script run.sh. Since this is a shell script, you will likely need to change the permissions of the file to run it, using `chmod` in Bash (I'm not sure of the powershell equivalent). If you don't want to do this, you can run the commands manually. The contents of the file are:
 `pip install -r requirements.txt`
 `npm --prefix ./frontend install`
 `npm --prefix ./frontend run dev & python backend/src/api.py`
