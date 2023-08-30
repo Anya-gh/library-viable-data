@@ -1,5 +1,5 @@
 import './App.css'
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import Library from './pages/Library'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
