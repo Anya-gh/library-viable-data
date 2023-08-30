@@ -1,4 +1,4 @@
-import logo from '../../assets/viable-data-logo.svg'
+import logo from '../assets/viable-data-logo.svg'
 
 export default function Footer() {
   return (

@@ -3,7 +3,6 @@ import os
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 con = sqlite3.connect(os.path.join(ROOT_DIR, 'library.db'))
-con.execute("PRAGMA foreign_keys = ON")
 cur = con.cursor()
 
 cur.execute("DROP TABLE IF EXISTS Users")
@@ -22,8 +21,17 @@ cur.execute("""CREATE TABLE Books
 (BID INTEGER PRIMARY KEY,
 Title TEXT NOT NULL,
 Description TEXT NOT NULL,
-Image TEXT,
+Image TEXT
+)""")
+
+cur.execute("DROP TABLE IF EXISTS Loans")
+
+cur.execute("""CREATE TABLE Loans
+(LID INTEGER PRIMARY KEY,
+BID INTEGER UNIQUE,
 UID INTEGER,
+Return DATE,
+FOREIGN KEY(BID) REFERENCES Books(BID),
 FOREIGN KEY(UID) REFERENCES Users(UID)
 )""")
 

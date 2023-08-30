@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './pages/Home/Home'
-import Library from './pages/Library'
+import Library from './pages/Library/Library'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 function App() {

@@ -1,6 +1,6 @@
 import Authentication from './Authentication'
 import DetailsCard from './DetailsCard'
-import Footer from './Footer'
+import Footer from '../../components/Footer'
 import Testimonies from './Testimonies'
 import logo from '../../assets/viable-data-logo.svg'
 import brain from '../../assets/icons8-brain-64.png'
