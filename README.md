@@ -21,6 +21,8 @@ If this does not work for whatever reason, please install the packages manually.
 - Tailwind
 - Framer motion
 
+Of all of these it's likely Tailwind that will cause the issue, so that might need to be installed separately; you'll just need to run `npm install -D tailwindcss postcss autoprefixer` if this is the case.
+
 ### Browser
 
 Firefox has certain issues with accessing resources locally, due to a CORS setting. It seems like this can happen for a number of reasons; if it does, please try another browser. 
