@@ -63,8 +63,8 @@ export default function Authentication() {
               </motion.div>
             </AnimatePresence>
             <div className='flex flex-row mb-3'>
-              <InputElement text={"Email"} name="email" />
-              <InputElement text={"Password"} name="password" />
+              <input className='p-2 my-2 mr-2 rounded-xl border-white w-40 overflow-scroll lg:hover:bg-gray-100 transition duration-200' type="text" name="email" placeholder="Email"/>
+              <input className='p-2 my-2 mr-2 rounded-xl border-white w-40 overflow-scroll lg:hover:bg-gray-100 transition duration-200' type="password" name="password" placeholder="Password"/>
             </div>
           </div>
           <input className='py-2 px-4 m-2 rounded-xl bg-sky-500 mb-10 lg:hover:cursor-pointer lg:hover:bg-sky-400 transition duration-200' type="submit" value={active === 'signup' ? 'Sign up' : 'Log in'}/>
@@ -75,16 +75,5 @@ export default function Authentication() {
     </div>
     
     </>
-  )
-}
-
-type InputElementProps = {
-  text: string,
-  name: string
-}
-
-const InputElement = ( {text, name} : InputElementProps) => {
-  return (
-    <input className='p-2 my-2 mr-2 rounded-xl border-white w-40 overflow-scroll lg:hover:bg-gray-100 transition duration-200' type="text" name={name} placeholder={text}/>
   )
 }
