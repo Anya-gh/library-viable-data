@@ -37,8 +37,8 @@ For basic testing purposes, there is one user:
 Anya Singh, email: anya@mail.com, password: password123
 
 There are two books:
-Book of cool
-Guide of guides
+- Book of cool
+- Guide of guides
 
 The one user is loaning the first book.
 
