@@ -26,7 +26,7 @@ The application includes a complete UI with a home and library page, built with 
 
 I have included an example of a unit test, but I have not been able to unit test thoroughly. For me, the given time was not enough to comprehensively test using unit tests, so I apologise about that. I wanted to focus more on the frontend and backend.
 
-I recreated the company logo in Figma. I did not create every logo I used; the ones I did not are credited in the footer. The image used for the hero banner is a stock image.
+I recreated the company logo in Figma. Every logo I created for this app was in Figma, but I did not create all of them; the ones I did not are credited in the footer. The image used for the hero banner is a stock image.
 
 Thank you for taking a look!
 
