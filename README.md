@@ -21,11 +21,11 @@ If this does not work for whatever reason, please install the packages manually.
 - Tailwind
 - Framer motion
 
-### Browser
+### Browser
 
 Firefox has certain issues with accessing resources locally, due to a CORS setting. It seems like this can happen for a number of reasons; if it does, please try another browser. 
 
-This app has responsive design, so feel free to resize the browser window as you wish! Most browers have a responsive design view tool as well, which is best suited to see this.
+This app has responsive design, so feel free to resize the browser window as you wish! Most browsers have a responsive design view tool as well, which is best suited to see this.
 
 ## Notes
 The application includes a complete UI with a home and library page, built with React. It uses a Python API with flask and sqlite for the database to manage the library data.
