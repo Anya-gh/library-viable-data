@@ -1,4 +1,5 @@
 import { booksResponse } from "./Library"
+import bookicon from '../../assets/icons8-book-50.png'
 
 type BookContentProps = {
   book: booksResponse,
@@ -14,7 +15,9 @@ const onClickHandler = async (uid: number, bid: number) => {
 export default function BookContent ( {book, uid, bid}: BookContentProps) {
 
   return (
-    <li key={book.title} className='bg-gray-100 w-72 h-60 rounded-xl p-10 m-10 flex flex-col'>
+    <>
+    <li key={book.title} className='bg-gray-100 w-72 h-80 overflow-scroll rounded-xl p-10 m-10 flex flex-col items-start'>
+      {book.image ? <img src={book.image} alt='bookicon' /> : <img src={bookicon} alt='bookicon' className='max-h-20 max-w-20 h-auto w-auto'/>}
       <h1 className='font-bold tracking-wide text-lg'>{book.title}</h1>
       <p>{book.description}</p>
       {book.uid ? 
@@ -26,5 +29,6 @@ export default function BookContent ( {book, uid, bid}: BookContentProps) {
       : 
       <button className='p-1 w-20 rounded-xl bg-sky-500 mb-10 lg:hover:cursor-pointer lg:hover:bg-sky-400 transition duration-200' onClick={() => {onClickHandler(uid, bid)}}>Loan</button>}
     </li>
+    </>
   )
 }

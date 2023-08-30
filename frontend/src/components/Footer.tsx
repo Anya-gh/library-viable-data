@@ -21,6 +21,7 @@ export default function Footer() {
         <span className="flex flex-row"><p className='text-gray-500'><a className='text-sky-700' target="_blank" href="https://icons8.com/icon/KlAC5P1TnEXu/brain">Brain</a> icon by <a className='text-sky-700' target="_blank" href="https://icons8.com">Icons8</a></p></span>
         <p className='text-gray-500'><a className='text-sky-700' target="_blank" href="https://icons8.com/icon/59040/inscription">Note</a> icon by <a className='text-sky-700' target="_blank" href="https://icons8.com">Icons8</a></p>
         <p className='text-gray-500'><a className='text-sky-700' target="_blank" href="https://icons8.com/icon/2325/floating-guru">meditate</a> icon by <a className='text-sky-700' target="_blank" href="https://icons8.com">Icons8</a></p>
+        <p className='text-gray-500'><a className='text-sky-700' target="_blank" href="https://icons8.com/icon/42763/book">Book</a> icon by <a target="_blank" href="https://icons8.com" className='text-sky-700'>Icons8</a></p>
       </div>
       
     </div>

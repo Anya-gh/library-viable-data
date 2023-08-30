@@ -13,7 +13,8 @@ export type booksResponse = {
   email: string | null,
   returndate: string | null
   uid: number | null,
-  bid: number
+  bid: number,
+  image: string | null
 }
 
 export default function Library() {

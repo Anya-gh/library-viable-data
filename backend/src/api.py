@@ -79,11 +79,11 @@ def books():
         con = sqlite3.connect(os.path.join(ROOT_DIR, 'library.db'))
         con.execute("PRAGMA foreign_keys = ON")
         cur = con.cursor()
-        res = cur.execute("SELECT Books.Title, Books.Description, LoanedBooks.First_Name, LoanedBooks.Last_Name, LoanedBooks.Email, LoanedBooks.Return, LoanedBooks.UID, Books.BID from Books LEFT OUTER JOIN (SELECT Users.First_Name, Users.Last_Name, Users.Email, Loans.Return, Loans.UID, Loans.BID FROM Loans JOIN Users WHERE Loans.UID == Users.UID) as LoanedBooks on Books.BID == LoanedBooks.BID").fetchall()
+        res = cur.execute("SELECT Books.Title, Books.Description, LoanedBooks.First_Name, LoanedBooks.Last_Name, LoanedBooks.Email, LoanedBooks.Return, LoanedBooks.UID, Books.BID, Books.Image from Books LEFT OUTER JOIN (SELECT Users.First_Name, Users.Last_Name, Users.Email, Loans.Return, Loans.UID, Loans.BID FROM Loans JOIN Users WHERE Loans.UID == Users.UID) as LoanedBooks on Books.BID == LoanedBooks.BID").fetchall()
         data = []
         for row in res:
-            title, description, firstname, lastname, email, returndate, uid, bid = row
-            data.append({"title": title, "description": description, "firstname": firstname, "lastname": lastname, "email": email, "returndate": returndate, "uid": uid, "bid": bid})
+            title, description, firstname, lastname, email, returndate, uid, bid, image = row
+            data.append({"title": title, "description": description, "firstname": firstname, "lastname": lastname, "email": email, "returndate": returndate, "uid": uid, "bid": bid, "image": image})
         return jsonify(data)
 
 @app.route('/loan', methods=["POST"])
